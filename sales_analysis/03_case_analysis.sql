@@ -1,4 +1,4 @@
--- Q11. Create a new column “Sale_Type” using CASE:
+-- . Create a new column “Sale_Type” using CASE:
  -- High Sale → sale_amount > 30000
 -- Medium Sale → between 15000 and 30000
 -- Low Sale → others.**
@@ -10,7 +10,7 @@ else 'lowsales'
 end as sale_type
 from sales ;
 
--- Q17. Show customer_name, product_name, sale_amount, and a CASE column:
+--  Show customer_name, product_name, sale_amount, and a CASE column:
 	-- “Premium” if sale_amount > 40,000
 	-- “Moderate” if (quantity > 5 AND sale_amount BETWEEN 15,000 AND 40,000)
 	-- “Budget” for all other rows
@@ -22,7 +22,7 @@ select customer_name , product_name , sale_amount , case
  else 'budget' end as 'sale_'
  from sales  where payment_method != 'cash' or payment_method != 'null';
 
--- Q22. Create a CASE-based discount column:
+-- . Create a CASE-based discount column:
 	-- 10% discount if payment_method = 'UPI'
 	-- 5% discount if payment_method contains the letter 'd'
 	-- 2% discount for all others
